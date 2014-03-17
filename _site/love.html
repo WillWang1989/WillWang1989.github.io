@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Your New Jekyll Site</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title">
+            <a href="/">Will Wang</a>
+            <a href="/rose.html">A rose for my love</a><a href="/love.html">See how much I love you</a></h1>
+          </div>
+
+          		<canvas id="c" width="1366" height="585" style="background: none repeat scroll 0% 0% rgb(0, 0, 0);"></canvas>
+		<script>
+			var b = document.body;
+			var c = document.getElementsByTagName('canvas')[0];
+			var a = c.getContext('2d');
+			document.body.clientWidth; // fix bug in webkit: http://qfox.nl/weblog/218
+		</script>
+		<script>
+// start of submission //
+counter=offset=y=0;c.width=w=window.innerWidth/2;c.height=h=window.innerHeight;c.style.background='#000';setInterval(function(){a.fillStyle='rgba(0,0,0,0.6)';a.fillRect(0,0,w,h);for(var i=0;i<=h;i+=h/20){y=w/6*Math.sin(counter+offset)+w/2;r=30*Math.sin(counter)+50;r2=30*Math.cos(counter)+50;a.fillStyle='hsl('+i+','+r2*2+'%,50%)';a.font=r+'px Arial';a.fillText('♥',-y+w,i);a.font=r2+'px Arial';a.fillText('♥',y,i);offset+=0.2;}
+offset=0;counter+=.04},30);
+// end of submission //
+		</script>
+
+
+          <div class="footer">
+          <p>I hate people who still use IE</p>
+            <div class="contact">
+              <p>
+                My GitHub<br />
+                My Twitter<br />
+                My G+ <br/>
+                1173534785@qq.com
+              </p>
+            </div>
+            <div class="contact">
+              <p>
+                <a href="https://github.com/WillWang1989">github.com/WillWang1989</a><br />
+                <a href="https://twitter.com/WillWang1989">twitter.com/WillWang1989</a><br />
+                <a href="https://plus.google.com/u/0/+ShiderWang/">G+ WillWang1989</a><br />
+              </p>
+            </div>
+          </div>
+        </div>
+
+    </body>
+</html>
