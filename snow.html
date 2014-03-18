@@ -7,7 +7,8 @@ title: Will Wang is here
 snowStorm.snowColor = '#ff0000'; // blue-ish snow!?
 snowStorm.flakesMaxActive = 96;  // show more snow on screen at once
 snowStorm.useTwinkleEffect = true; // let the snow flicker in and out of view
-snowStorm.snowCharacter ="我♥你";
+var s = window.location.search.replace('?','').trim();
+snowStorm.snowCharacter = decodeURI(s)||"我♥你";
 </script>
 
 <div style="background:#336699;font:100 1.75em helvetica neue, helvetica,arial,verdana,sans-serif;color:#fff">
